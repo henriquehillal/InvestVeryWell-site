@@ -1,0 +1,42 @@
+/* --- Reset básico e tipografia --- */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#333;background:#f8f8f8}
+a{text-decoration:none;color:#0066cc}
+a:hover{color:#004a96}
+
+/* --- Layout global --- */
+.header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);position:sticky;top:0;z-index:100}
+.logo{font-weight:bold;font-size:1.5rem;color:#0066cc}
+.menu-toggle{display:none;font-size:1.5rem;background:none;border:none;cursor:pointer}
+.nav ul{display:flex;gap:1rem;list-style:none}
+.nav a{padding:.5rem 1rem;border-radius:4px}
+.nav a.active,.nav a:hover{background:#0066cc;color:#fff}
+
+/* --- Hero Section --- */
+.hero{background:url('../images/hero.jpg') center/cover no-repeat;min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:2rem}
+.hero h1{font-size:2.5rem;margin-bottom:1rem}
+.btn{background:#0066cc;color:#fff;padding:.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;transition:background .3s}
+.btn:hover{background:#004a96}
+
+/* --- Cards Section --- */
+.destaques{display:flex;gap:1rem;flex-wrap:wrap;padding:2rem;justify-content:center}
+.card{flex:1 1 280px;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .3s}
+.card:hover{transform:translateY(-5px)}
+
+/* --- Formulário --- */
+.contato form{display:flex;flex-direction:column;gap:1rem;max-width:500px;margin:auto;padding:2rem}
+label{display:flex;flex-direction:column;font-weight:bold}
+input,textarea{padding:.75rem;border:1px solid #ccc;border-radius:4px;font-size:1rem}
+.erro{font-size:.875rem;color:#c00;height:1rem}
+.oculto{display:none}
+#sucesso{color:green;text-align:center;margin-top:1rem}
+
+/* --- Footer --- */
+footer{background:#fff;padding:1rem 2rem;text-align:center;margin-top:2rem;border-top:1px solid #eaeaea}
+
+/* --- Responsividade --- */
+@media (max-width:768px){
+  .nav ul{flex-direction:column;display:none;background:#fff;position:absolute;top:70px;right:0;left:0;padding:1rem;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+  .nav ul.mostrar{display:flex}
+  .menu-toggle{display:block}
+}

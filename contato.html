@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestVeryWell – Contato</title>
+  <meta name="description" content="Entre em contato com a equipe InvestVeryWell e tire suas dúvidas sobre investimentos." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">InvestVeryWell</div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="artigos.html">Artigos</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <h1>Fale Conosco</h1>
+      <form id="contatoForm" novalidate>
+        <label>Nome
+          <input type="text" id="nome" required />
+          <span class="erro" aria-live="polite"></span>
+        </label>
+        <label>Email
+          <input type="email" id="email" required />
+          <span class="erro" aria-live="polite"></span>
+        </label>
+        <label>Mensagem
+          <textarea id="mensagem" required minlength="10"></textarea>
+          <span class="erro" aria-live="polite"></span>
+        </label>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <div id="sucesso" class="oculto" role="alert">Mensagem enviada com sucesso!</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 InvestVeryWell. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
